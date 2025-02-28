@@ -3,14 +3,15 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="w-11/12 mx-auto">
-      <div className="navbar bg-base-100">
+    <div className="bg-neutral-600 text-white">
+      <div className="lg:w-11/12 mx-auto">
+      <div className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-9 w-7"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -25,7 +26,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-black "
             >
               <li>
                 <NavLink to='/'>Home</NavLink>
@@ -43,10 +44,10 @@ const Navbar = () => {
              
             </ul>
           </div>
-          <a className=" text-3xl font-bold">DineSphere</a>
+          <a className=" lg:text-4xl text-3xl font-extrabold">Dine<span className="text-orange-500">Sphere</span></a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-base">
+          <ul className="menu menu-horizontal px-1 text-lg">
           <li>
                 <NavLink to='/'>Home</NavLink>
               </li>
@@ -62,7 +63,7 @@ const Navbar = () => {
               
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end text-black">
         <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
@@ -86,6 +87,7 @@ const Navbar = () => {
     </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

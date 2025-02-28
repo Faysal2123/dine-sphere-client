@@ -1,0 +1,4 @@
+.overlay-bg {
+    background: rgb(143,143,143);
+    background: linear-gradient(90deg, rgba(143,143,143,1) 0%, rgba(121,119,125,0.4318102240896359) 62%);
+  }
