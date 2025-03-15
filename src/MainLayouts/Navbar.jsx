@@ -1,4 +1,5 @@
 import React from "react";
+import { IoMdRestaurant } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -26,10 +27,10 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-black "
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-black font-semibold text-lg"
             >
               <li>
-                <NavLink to='/'>Home</NavLink>
+                <NavLink to='/'>HomeN</NavLink>
               </li>
               <li>
                 <NavLink to='/menu'>Menu</NavLink>
@@ -44,7 +45,12 @@ const Navbar = () => {
              
             </ul>
           </div>
+          <div className="flex items-center justify-center">
           <a className=" lg:text-4xl text-3xl font-extrabold">Dine<span className="text-orange-500">Sphere</span></a>
+          <div>
+          <IoMdRestaurant size={40} />
+          </div>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-lg">
