@@ -4,96 +4,122 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="bg-neutral-600 text-white">
+    <div className="bg-neutral-600 ">
       <div className="lg:w-11/12 mx-auto">
-      <div className="navbar ">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-9 w-7"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+        <div className="navbar fixed top-0 left-0 right-0 z-50 glass">
+          {/* Navbar Start */}
+          <div className="navbar-start">
+            {/* Mobile Menu */}
+            <div className="dropdown">
+              <button tabIndex={0} className="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-9 w-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </button>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content bg-white text-black rounded-box z-10 mt-3 w-52 p-2 shadow-lg font-semibold"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+                <li>
+                  <NavLink to="/" className={({ isActive }) => isActive ? "text-orange-500" : ""}>
+                    Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/menu" className={({ isActive }) => isActive ? "text-orange-500" : ""}>
+                    Menu
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/about" className={({ isActive }) => isActive ? "text-orange-500" : ""}>
+                    About us
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/contact" className={({ isActive }) => isActive ? "text-orange-500" : ""}>
+                    Contact
+                  </NavLink>
+                </li>
+              </ul>
             </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-black font-semibold text-lg"
-            >
+
+            {/* Logo */}
+            <div className="flex items-center gap-2">
+              <a className="text-3xl lg:text-4xl font-extrabold">
+               <span className="text-gray-300"> Dine</span><span className="text-orange-500">Sphere</span>
+              </a>
+              <IoMdRestaurant size={40} className="text-orange-500" />
+            </div>
+          </div>
+
+          {/* Navbar Center for Desktop */}
+          <div className="navbar-center hidden lg:flex">
+            <ul className="menu menu-horizontal px-1 text-lg space-x-6">
               <li>
-                <NavLink to='/'>HomeN</NavLink>
+                <NavLink to="/" className={({ isActive }) => isActive ? "text-orange-500" : ""}>
+                  Home
+                </NavLink>
               </li>
               <li>
-                <NavLink to='/menu'>Menu</NavLink>
+                <NavLink to="/menu" className={({ isActive }) => isActive ? "text-orange-500" : ""}>
+                  Menu
+                </NavLink>
               </li>
               <li>
-                <NavLink to='/about'>About us</NavLink>
+                <NavLink to="/about" className={({ isActive }) => isActive ? "text-orange-500" : ""}>
+                  About us
+                </NavLink>
               </li>
               <li>
-                <NavLink to='/contact'>Contact</NavLink>
+                <NavLink to="/contact" className={({ isActive }) => isActive ? "text-orange-500" : ""}>
+                  Contact
+                </NavLink>
               </li>
-              
-             
             </ul>
           </div>
-          <div className="flex items-center justify-center">
-          <a className=" lg:text-4xl text-3xl font-extrabold">Dine<span className="text-orange-500">Sphere</span></a>
-          <div>
-          <IoMdRestaurant size={40} />
+
+          {/* Navbar End (Profile) */}
+          <div className="navbar-end">
+            <div className="dropdown dropdown-end">
+              <button tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img
+                    alt="User"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
+                </div>
+              </button>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content bg-white text-black rounded-box z-10 mt-3 w-52 p-2 shadow-lg"
+              >
+                <li>
+                  <a className="justify-between">
+                    Profile <span className="badge">New</span>
+                  </a>
+                </li>
+                <li>
+                  <a>Settings</a>
+                </li>
+                <li>
+                  <a>Logout</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          </div>
-        </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-lg">
-          <li>
-                <NavLink to='/'>Home</NavLink>
-              </li>
-              <li>
-                <NavLink to='/menu'>Menu</NavLink>
-              </li>
-              <li>
-                <NavLink to='/about'>About us</NavLink>
-              </li>
-              <li>
-                <NavLink to='/contact'>Contact</NavLink>
-              </li>
-              
-          </ul>
-        </div>
-        <div className="navbar-end text-black">
-        <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img
-            alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
         </div>
       </div>
-      <ul
-        tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li>
-          <a className="justify-between">
-            Profile
-            <span className="badge">New</span>
-          </a>
-        </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
-      </ul>
-    </div>
-        </div>
-      </div>
-    </div>
     </div>
   );
 };
