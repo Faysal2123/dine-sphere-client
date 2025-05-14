@@ -1,6 +1,8 @@
 import React from "react";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
+import "./style.css"
+// import img1 from "../../../../img/resim7.jpg";
 
 const FeaturedDishes = () => {
   return (
@@ -9,7 +11,7 @@ const FeaturedDishes = () => {
       <div className="col-span-4 relative flex justify-center w-full">
         <motion.img
           src="/img/resim7.jpg"
-          className="w-full object-cover"
+          className="w-full object-cover filter brightness-75"
           alt=""
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -45,7 +47,7 @@ const FeaturedDishes = () => {
       </div>
 
       {/* Timeline Section */}
-      <div className="col-span-6 bg-black text-white md:space-y-10">
+      <div className="col-span-6 bg-black text-white md:space-y-10 ">
         {[1930, 1990, 2025].map((year, index) => (
           <motion.div
             key={index}
@@ -54,7 +56,7 @@ const FeaturedDishes = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: index * 0.3 }}
           >
-            <div className="text-center md:text-start mb-4">
+            <div className="text-center md:text-start mb-4 dancing-font">
               <CountUp start={0} end={year} delay={0} separator="">
                 {({ countUpRef }) => (
                   <motion.div
@@ -96,7 +98,7 @@ const FeaturedDishes = () => {
       {/* Side Images Section */}
       <div className="col-span-2 bg-black hidden sm:block">
         <div>
-          {["/public/img/resim32.jpg", "/public/img/kebab-set-table 1.png", "/public/img/9.jpg"].map((src, index) => (
+          {["/img/resim32.jpg", "/img/kebab-set-table 1.png", "/img/9.jpg"].map((src, index) => (
             <motion.img
               key={index}
               src={src}

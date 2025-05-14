@@ -18,10 +18,10 @@ const Reservation = () => {
                 <motion.h1 className='dancing-font text-4xl' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
                     Awebani experiences
                 </motion.h1>
-                <motion.h2 className='md:text-5xl text-3xl font-semibold' initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
+                <motion.h2 className='md:text-5xl text-2xl font-semibold' initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
                     LAUGH, CELEBRATE, INVITE
                 </motion.h2>
-                <motion.h2 className='md:text-5xl text-3xl font-semibold' initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1 }}>
+                <motion.h2 className='md:text-5xl text-2xl font-semibold' initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1 }}>
                     YOURSELF
                 </motion.h2>
                 <motion.p className='text-[#666666] md:w-6/12 text-center' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>

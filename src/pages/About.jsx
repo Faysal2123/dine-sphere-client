@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
     return (
-        <div className='bg-[#F9F9F9] py-10'>
+        <div className='bg-[#F9F9F9]  pt-20 lg:pt-36 mb-10'>
             <motion.div
                 className='flex flex-col justify-center items-center space-y-5'
                 initial={{ opacity: 0, y: 50 }}

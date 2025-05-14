@@ -1,10 +1,11 @@
 import React from 'react';
 import './style.css';
 import { FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
-        <div className='relative'>
+        <div className='relative mt-16'>
             <img src="/img/resim29.jpg" className='w-full lg:h-[600px] h-[350px] object-cover bg-center bg-no-repeat bg-fixed' alt="Banner" />
             
             {/* Overlay Content */}
@@ -16,9 +17,9 @@ const Banner = () => {
                     A place where every plate of sushi becomes a real work of art that you can enjoy on your lips.
                 </p>
                 <div className='lg:mt-6 mt-3 flex justify-center'>
-                    <button className='bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 transition font-bold flex items-center gap-2' >
+                    <Link to={`/menu`} className='bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 transition font-bold flex items-center gap-2' >
                         Explore Our Menu<span><FaArrowRight /></span>
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ import FeaturedDishes from './Featured Dishes/FeaturedDishes';
 import ShowItem from './ShowItem/ShowItem';
 import FoodMenus from './FoodMenus/FoodMenus';
 import Reservation from './Reservation/Reservation';
+import NewsLetter from './NewsLetter/NewsLetter';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <FeaturedDishes></FeaturedDishes>
             <ShowItem></ShowItem>
             <FoodMenus></FoodMenus>
+            <NewsLetter></NewsLetter>
         </div>
     );
 };
